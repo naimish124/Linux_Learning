@@ -43,6 +43,8 @@ int main(int argc, char *argv[])
 	printf("transfer data between file descriptors\n");
 	getchar();
 	
+	fsync(ofd);
+	
 	close(ifd);
 	close(ofd);
 	return 0;
