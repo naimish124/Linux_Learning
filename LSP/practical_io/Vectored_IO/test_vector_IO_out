@@ -1,0 +1,18 @@
+
+int fd,fd1,fd2;
+fd = open("/media/abc", O_RDWR);  //fat volume
+              |
+     sys_open("/media/abc",...); --> vfs
+	      |
+     vfs_open("/media/abc", ...);
+
+	1. lookup at the specified path to reach vnode of the file requested.
+	2. lookup vnode for reference of fs specific inode.
+	3. lookup for reference of valid operations within inode.
+
+      ret = fat_open("....");
+	if(ret == 0)
+		
+
+
+fd
